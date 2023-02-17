@@ -14,6 +14,8 @@ zip -qr $now-files.zip /www
 
 # Print status message
 echo '[' `date +%d-%m-%Y.%H:%M:%S` '] Upload file to Google Drive'
+
+# Upload to GD
 rclone -P copy $now-files.zip google:/backup/LinuxHome
 #echo '[' `date +%d-%m-%Y.%H:%M:%S` '] Upload file to Yandex Disk'
 #rclone -P copy $now-files.zip yandex:/backup/LinuxHome
